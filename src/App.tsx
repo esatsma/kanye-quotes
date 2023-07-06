@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import QuoteBlock from "./components/templates/QuoteBlock/QuoteBlock";
-import "./app.scss";
+import "./App.scss";
 
 function App() {
   const queryClient = new QueryClient({
