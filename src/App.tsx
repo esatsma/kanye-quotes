@@ -15,9 +15,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="app">
-        <header>
-          <h1>Quotes by Kanye</h1>
-        </header>
         <QuoteBlock />
       </div>
     </QueryClientProvider>

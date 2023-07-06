@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import fetchKanyeQuote from "../../../service/fetchKanyeQuote";
+import Header from "../../atoms/Header/Header";
 import Loader from "../../atoms/Loader/Loader";
 import QuoteCard from "../../molecules/QuoteCard/QuoteCard";
 import "./QuoteBlock.scss";
@@ -14,10 +15,11 @@ export const QuoteBlock = () => {
 
   return (
     <>
-      <QuoteCard quote={quote} />
+      <Header />
       <button type="button" className="button" onClick={() => refetch()}>
         Get me a new quote
       </button>
+      <QuoteCard quote={quote} />
     </>
   );
 };
