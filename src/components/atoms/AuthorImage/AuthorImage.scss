@@ -1,0 +1,10 @@
+.author-image {
+    border-radius: 100%;
+    border: 2px solid teal;
+    box-shadow: 2rem -.5rem teal;
+    width: 5rem;
+    height: 5rem;
+
+    @media (min-width: 768px) {width: 10rem;
+        height: 10rem;}
+}

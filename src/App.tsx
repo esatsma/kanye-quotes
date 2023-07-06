@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import QuoteBlock from "./components/QuoteBlock/QuoteBlock";
+import QuoteBlock from "./components/templates/QuoteBlock/QuoteBlock";
 import "./app.scss";
 
 function App() {

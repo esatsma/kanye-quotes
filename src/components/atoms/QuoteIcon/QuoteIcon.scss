@@ -1,0 +1,39 @@
+.quote-icon {
+    font-size: 5rem;
+    color: teal;
+    
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: shapeshift;
+    animation-name: shapeshift;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+    @media (min-width: 768) {
+        top: -7rem;
+        font-size: 10rem;
+    }
+
+    svg {
+        fill: currentColor;
+    }
+}
+
+@keyframes shapeshift {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    to {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+}
