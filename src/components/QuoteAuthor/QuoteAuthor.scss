@@ -1,0 +1,31 @@
+.author {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (min-width: 768px)
+    { 
+        flex-direction: row;
+    }
+}
+
+.author-name {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: white;
+    padding: 0.5rem;
+    border: 2px solid teal;
+    border-radius: 0.5rem;
+    box-shadow: 1rem -.5rem teal;
+}
+
+.author-image {
+    border-radius: 100%;
+    border: 2px solid teal;
+    box-shadow: 2rem -.5rem teal;
+    width: 5rem;
+    height: 5rem;
+
+    @media (min-width: 768px) {width: 10rem;
+        height: 10rem;}
+}
