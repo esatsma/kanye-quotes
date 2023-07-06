@@ -17,7 +17,7 @@ export const QuoteBlock = () => {
     <>
       <Header />
       <button type="button" className="button" onClick={() => refetch()}>
-        Get me a new quote
+        Quote me
       </button>
       <QuoteCard quote={quote} />
     </>

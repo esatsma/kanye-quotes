@@ -3,7 +3,7 @@ import "./Header.scss";
 export const Header = () => {
   return (
     <header>
-      <h1>Quotes by Kanye</h1>
+      <h1>Kanye Says...</h1>
     </header>
   );
 };
