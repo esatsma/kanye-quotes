@@ -5,7 +5,6 @@ import "./QuoteBlock.scss";
 
 export const QuoteBlock = () => {
   const { data, refetch, isLoading } = useQuery(["quote"], fetchKanyeQuote);
-  console.log(data);
   const quote = data?.quote ? data.quote : "No quote found";
 
   if (isLoading) {

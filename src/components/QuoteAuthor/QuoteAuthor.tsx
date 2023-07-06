@@ -4,8 +4,11 @@ import "./QuoteAuthor.scss";
 export const QuoteAuthor = () => {
   return (
     <div className="author">
-      <p className="author-name">-- Kanye West</p>
+      <p data-testid="author-name" className="author-name">
+        -- Kanye West
+      </p>
       <img
+        data-testid="author-image"
         className="author-image"
         src={AuthorImage}
         alt="picture of Kanye West"
