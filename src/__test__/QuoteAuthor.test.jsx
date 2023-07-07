@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import { render } from "@testing-library/react";
-import QuoteAuthor from "../components/QuoteAuthor/QuoteAuthor";
+import QuoteAuthor from "../components/molecules/QuoteAuthor/QuoteAuthor";
 
 test("Displays an image of Kanye", async () => {
   const quoteAuthor = render(<QuoteAuthor />);

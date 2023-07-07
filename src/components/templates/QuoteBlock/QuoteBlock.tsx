@@ -1,12 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
-import fetchKanyeQuote from "../../../service/fetchKanyeQuote";
+import useKanyeQuote from "../../../hooks/useKanyeQuote";
 import Header from "../../atoms/Header/Header";
 import Loader from "../../atoms/Loader/Loader";
 import QuoteCard from "../../molecules/QuoteCard/QuoteCard";
 import "./QuoteBlock.scss";
 
 export const QuoteBlock = () => {
-  const { data, refetch, isLoading } = useQuery(["quote"], fetchKanyeQuote);
+  const { data, refetch, isLoading } = useKanyeQuote();
   const quote = data?.quote ? data.quote : "No quote found";
 
   if (isLoading) {

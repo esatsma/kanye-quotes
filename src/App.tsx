@@ -16,6 +16,11 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="app">
         <QuoteBlock />
+        <a
+          href="https://github.com/esatsma/kanye-quotes"
+          target="blank"
+          className="github"
+        ></a>
       </div>
     </QueryClientProvider>
   );
