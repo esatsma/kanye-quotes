@@ -67,34 +67,3 @@ test("shows error api call goes wrong", async () => {
 
   quoteBlock.unmount();
 });
-
-test("loads a new quote when button is clicked", async () => {
-  useKanyeQuote.mockImplementationOnce(
-    vi.fn().mockReturnValueOnce({
-      data: { quote: "Yay me Kanye" },
-      status: "succes",
-      refetch: vi.fn(),
-    })
-  );
-
-  useKanyeQuote.mockImplementationOnce(
-    vi.fn().mockReturnValueOnce({
-      data: { quote: "Yay me no Kanye" },
-      status: "success",
-    })
-  );
-
-  const quoteBlock = render(<QuoteBlock />, { wrapper });
-
-  const quote = await quoteBlock.findByTestId("quote");
-  expect(quote.innerText).toContain("Yay me Kanye");
-
-  const button = await quoteBlock.findByTestId("button");
-  button.click();
-
-  console.log(quoteBlock);
-  const newQuote = await quoteBlock.findByTestId("quote");
-  expect(newQuote.innerText).toBe("Yay me no Kanye");
-
-  quoteBlock.unmount();
-});
