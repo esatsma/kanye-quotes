@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import QuoteBlock from "./components/templates/QuoteBlock/QuoteBlock";
 import "./App.scss";
 import Header from "./components/atoms/Header/Header";
-import { Footer } from "./components/atoms/Footer/footer";
+import Footer from "./components/atoms/Footer/Footer";
 
 function App() {
   const queryClient = new QueryClient({
