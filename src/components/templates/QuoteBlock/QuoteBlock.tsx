@@ -1,21 +1,40 @@
 import useKanyeQuote from "../../../hooks/useKanyeQuote";
-import Header from "../../atoms/Header/Header";
 import Loader from "../../atoms/Loader/Loader";
 import QuoteCard from "../../molecules/QuoteCard/QuoteCard";
-import "./QuoteBlock.scss";
+import styles from "./QuoteBlock.module.scss";
 
 export const QuoteBlock = () => {
-  const { data, refetch, isLoading } = useKanyeQuote();
+  const { data, refetch, status } = useKanyeQuote();
   const quote = data?.quote ? data.quote : "No quote found";
 
-  if (isLoading) {
+  if (status === "loading") {
     return <Loader />;
+  }
+
+  if (status === "error") {
+    return (
+      <div data-testid="error">
+        Apologies, something went wrong. Press the button to try again
+        <button
+          data-testid="button"
+          type="button"
+          className={styles.button}
+          onClick={() => refetch()}
+        >
+          Quote me
+        </button>
+      </div>
+    );
   }
 
   return (
     <>
-      <Header />
-      <button type="button" className="button" onClick={() => refetch()}>
+      <button
+        data-testid="button"
+        type="button"
+        className={styles.button}
+        onClick={() => refetch()}
+      >
         Quote me
       </button>
       <QuoteCard quote={quote} />

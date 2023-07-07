@@ -14,4 +14,6 @@ test("Displays Kanye's name", async () => {
   const quoteAuthor = render(<QuoteAuthor />);
   const authorName = await quoteAuthor.findByTestId("author-name");
   expect(authorName.innerText).toContain("Kanye West");
+
+  quoteAuthor.unmount();
 });

@@ -1,10 +1,10 @@
 import AuthorImage from "../../atoms/AuthorImage/AuthorImage";
 import AuthorName from "../../atoms/AuthorName/AuthorName";
-import "./QuoteAuthor.scss";
+import styles from "./QuoteAuthor.module.scss";
 
 export const QuoteAuthor = () => {
   return (
-    <div className="author">
+    <div className={styles.author}>
       <AuthorName />
       <AuthorImage />
     </div>

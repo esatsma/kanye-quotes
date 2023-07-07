@@ -1,8 +1,10 @@
-import "./QuoteIcon.scss";
+import styles from "./QuoteIcon.module.scss";
 
-export const QuoteIcon = () => {
+export const QuoteIcon = ({ className }: { className?: string }) => {
+  const classNames = `${className} ${styles.quoteIcon}`;
+
   return (
-    <i className="quote-icon">
+    <i className={classNames}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="1em"

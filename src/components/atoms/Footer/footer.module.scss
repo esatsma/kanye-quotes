@@ -1,0 +1,12 @@
+.footer {
+    margin-top: 4rem;
+}
+
+.link {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

@@ -22,5 +22,5 @@ test("gives back quote", async () => {
   await waitFor(() => expect(result.current.isSuccess).toBe(true));
 
   const quote = result.current;
-  expect(quote.data.quote).toContain("Yay, me Kanye");
+  expect(quote?.data?.quote).toContain("Yay, me Kanye");
 });

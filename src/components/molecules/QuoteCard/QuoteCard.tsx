@@ -1,12 +1,12 @@
 import QuoteIcon from "../../atoms/QuoteIcon/QuoteIcon";
 import QuoteAuthor from "../QuoteAuthor/QuoteAuthor";
-import "./QuoteCard.scss";
+import styles from "./QuoteCard.module.scss";
 
 export const QuoteCard = ({ quote }: { quote: string }) => {
   return (
-    <div className="card" data-testid="quotecard">
-      <QuoteIcon />
-      <p data-testid="quote" className="quote">
+    <div className={styles.card} data-testid="quotecard">
+      <QuoteIcon className={styles.quoteIcon} />
+      <p data-testid="quote" className={styles.quote}>
         {quote}
       </p>
       <QuoteAuthor />
