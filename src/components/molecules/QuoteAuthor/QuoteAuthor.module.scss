@@ -9,10 +9,10 @@
         justify-content: flex-end;
         flex-direction: row;
     }
+}
 
-    .author-name {
-        position: relative;
-        align-self: flex-end;
-        margin: 0 -2rem 0 -3rem;
-    }
+.authorName {
+    position: relative;
+    align-self: flex-end;
+    margin: 0 -2rem 0 -3rem;
 }
